@@ -21,15 +21,7 @@ function modelLoaded(){
     status=true;
 }
 
-function gotResult(error, results) {adq
-    if(error){
-        console.error(error);
-    }
-    else{
-        console.log(results);
-        objects=results;
-    }
-}
+
 
 function draw(){
     image(video, 0, 0, 380, 380);
@@ -48,5 +40,15 @@ function draw(){
             stroke(r,g,b);
             rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
         }
+    }
+}
+
+function gotResult(error, results) {
+    if(error){
+        console.error(error);
+    }
+    else{
+        console.log(results);
+        objects=results;
     }
 }
